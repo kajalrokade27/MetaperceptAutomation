@@ -106,7 +106,9 @@ public class BasicScript extends CrossBrowserTesting
 						act.keyDown(Keys.PAGE_DOWN).build().perform();
 					}
 					if(i>=2) {
-						Thread.sleep(6000);
+						driver.switchTo().window(parent);
+				
+						Thread.sleep(3000);
 					act.keyDown(Keys.PAGE_DOWN).build().perform();
 					act.keyDown(Keys.PAGE_DOWN).build().perform();
 					act.keyDown(Keys.PAGE_DOWN).build().perform();

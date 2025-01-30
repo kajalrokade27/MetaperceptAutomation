@@ -47,7 +47,7 @@ public class HomePOM extends CrossBrowserTesting
    public @FindBy(xpath="//h1[@class=\"jsx-643036caf1458463 breadcrumb__title mb-10\"]")
    WebElement techWriterTitle;
    
-   public @FindBy(xpath="//h2[@class=\"tp-section__title\"]")
+   public @FindBy(xpath="//*[@class=\"tp-section__title\"]")
    List<WebElement> singleCard;
    
    public @FindBy(css="img[alt=\"Metapercept_logo\"]")

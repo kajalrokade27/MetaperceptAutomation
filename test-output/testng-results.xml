@@ -14,38 +14,38 @@
       <![CDATA[Technical writer navigate to correct page]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-01-30T15:00:48 IST" name="Default suite" finished-at="2025-01-30T15:01:32 IST" duration-ms="43770">
+  <suite started-at="2025-01-30T16:19:22 IST" name="Default suite" finished-at="2025-01-30T16:20:18 IST" duration-ms="56186">
     <groups>
     </groups>
-    <test started-at="2025-01-30T15:00:48 IST" name="Default test" finished-at="2025-01-30T15:01:32 IST" duration-ms="43770">
+    <test started-at="2025-01-30T16:19:22 IST" name="Default test" finished-at="2025-01-30T16:20:18 IST" duration-ms="56186">
       <class name="homeScripts.BasicScript">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T15:00:48 IST" name="preCondition" finished-at="2025-01-30T15:01:04 IST" duration-ms="15421" status="PASS">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T16:19:22 IST" name="preCondition" finished-at="2025-01-30T16:19:45 IST" duration-ms="22350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="verifyGetInTouchNavigation()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T15:01:04 IST" name="verifyGetInTouchNavigation" finished-at="2025-01-30T15:01:31 IST" duration-ms="27779" status="FAIL">
+        <test-method signature="verifyGetInTouchNavigation()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T16:19:45 IST" name="verifyGetInTouchNavigation" finished-at="2025-01-30T16:20:17 IST" duration-ms="32783" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (216, -43)
+              <![CDATA[element click intercepted: Element is not clickable at point (566, 1177)
   (Session info: chrome=132.0.6834.160)
 Build info: version: '4.16.0', revision: '15400459dd*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3bd7a88eacb4e06186a8ca7fd2ead6e6, clickElement {id=f.49FFF2CE4278C94FE0F9543919C440C1.d.99A50AFB139E7A7D7F97FF1FD157E228.e.36}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51279}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51279/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3bd7a88eacb4e06186a8ca7fd2ead6e6)] -> css selector: img[alt="Metapercept_logo"]]
-Session ID: 3bd7a88eacb4e06186a8ca7fd2ead6e6]]>
+Command: [bccac833cd7f6439314b2bb7140c9604, clickElement {id=f.9380A528F6C479A9F3940D76CCB088CA.d.952E47C02F1CA4B417CD8484D10A132E.e.8074}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54022/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bccac833cd7f6439314b2bb7140c9604)] -> xpath: //*[@class="tp-section__title"]]
+Session ID: bccac833cd7f6439314b2bb7140c9604]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (216, -43)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (566, 1177)
   (Session info: chrome=132.0.6834.160)
 Build info: version: '4.16.0', revision: '15400459dd*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3bd7a88eacb4e06186a8ca7fd2ead6e6, clickElement {id=f.49FFF2CE4278C94FE0F9543919C440C1.d.99A50AFB139E7A7D7F97FF1FD157E228.e.36}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51279}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51279/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3bd7a88eacb4e06186a8ca7fd2ead6e6)] -> css selector: img[alt="Metapercept_logo"]]
-Session ID: 3bd7a88eacb4e06186a8ca7fd2ead6e6
+Command: [bccac833cd7f6439314b2bb7140c9604, clickElement {id=f.9380A528F6C479A9F3940D76CCB088CA.d.952E47C02F1CA4B417CD8484D10A132E.e.8074}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54022/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bccac833cd7f6439314b2bb7140c9604)] -> xpath: //*[@class="tp-section__title"]]
+Session ID: bccac833cd7f6439314b2bb7140c9604
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -58,11 +58,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at homeScripts.BasicScript.verifyGetInTouchNavigation(BasicScript.java:101)
+at homeScripts.BasicScript.verifyGetInTouchNavigation(BasicScript.java:89)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -107,7 +103,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </line>
           </reporter-output>
         </test-method> <!-- verifyGetInTouchNavigation -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T15:01:32 IST" name="postCondition" finished-at="2025-01-30T15:01:32 IST" duration-ms="72" status="PASS">
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:homeScripts.BasicScript@34e9fd99]" started-at="2025-01-30T16:20:18 IST" name="postCondition" finished-at="2025-01-30T16:20:18 IST" duration-ms="66" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
