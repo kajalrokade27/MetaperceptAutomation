@@ -9,16 +9,17 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.BeforeMethod;
 
 import fileUtility.GetPropertyData;
+import pageObjectModel.HomePOM;
 
 public class CrossBrowserTesting 
 {
 public static WebDriver driver;
 	
-	@BeforeClass
-	public void preCondition() throws IOException
+	@BeforeMethod
+	public void preCondition() throws IOException, InterruptedException
 	{
 		String browser = GetPropertyData.propData("mt_browser");
 		String web_url = GetPropertyData.propData("mt_url");
@@ -45,6 +46,13 @@ public static WebDriver driver;
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
        //Enter into web application
        driver.navigate().to(web_url);
+	
+		 HomePOM hp = new HomePOM(driver);
+		  hp.acceptCookies();
+		  Thread.sleep(5000);
+		  driver.switchTo().frame(hp.chatIframe);
+		 hp.minChatBoat();
+		 driver.switchTo().parentFrame();
 	}
 	@AfterClass
 	public void postCondition()

@@ -5,9 +5,9 @@
     <classes>
       <class name="homeScripts.BasicScript">
         <methods>
+          <include name="offerServicesVerify"/>
           <include name="preCondition"/>
           <include name="postCondition"/>
-          <include name="verifyGetInTouchNavigation"/>
         </methods>
       </class> <!-- homeScripts.BasicScript -->
     </classes>
