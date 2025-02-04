@@ -11,53 +11,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import action.ActionClass;
 import base.CrossBrowserTesting;
 import fileUtility.GetExcelData;
 import pageObjectModel.HomePOM;
-
+@Listeners(listeners.ListenersClass.class)
 public class FooterModuleNavigation extends CrossBrowserTesting
 {
    
-  @Test(enabled= false)
-  public void emailValidation() throws EncryptedDocumentException, IOException, InterruptedException
-  {
-	  HomePOM hp = new HomePOM(driver);
-	  Actions act = new Actions(driver);
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  Thread.sleep(5000); 
-	  hp.email.sendKeys(GetExcelData.Exceldata("Sheet1", 1, 0));
-	  Thread.sleep(3000);
-	  hp.subscribe.click();
-	  
-	    String given_title = "Metapercept Technology Services LLP";
-		String parent = driver.getWindowHandle();
-		
-		Set<String> child = driver.getWindowHandles();
-	
-		Thread.sleep(4000);
-		System.out.println(child);
-		System.out.println(parent);
-		for(String str : child)
-		{
-			driver.switchTo().window(str);
-			
-			if(given_title.equals(driver.getTitle()))
-			{
-	       if(hp.thankUPage.isDisplayed())
-	       {
-		  Reporter.log("Email field validation with valid email successful",true);
-	       }
-		    }
-	   }
-  }
+
  
   @Test(enabled=true)
   public void quickLinkNavigation() throws InterruptedException

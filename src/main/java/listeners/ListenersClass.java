@@ -1,6 +1,7 @@
 package listeners;
 
 
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
@@ -73,23 +74,26 @@ public class ListenersClass extends CrossBrowserTesting implements ITestListener
 	@Override
 	public void onStart(ITestContext context) 
 	{
-		//Create spark reporter
-		spark = new ExtentSparkReporter(".\\Reports\\metaperceptReports.html");
-		
+		//create spark reporter
+		try {
+			spark = new ExtentSparkReporter(".\\Reports\\metaperceptReports.html");
+		} catch (EncryptedDocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//configure the spark reporter
-		spark.config().setDocumentTitle("SampleReport");
-		spark.config().setReportName("Metapercept_Report");
-		spark.config().setTheme(Theme.STANDARD);
-		
-		//Create extent report
+		spark.config().setDocumentTitle("Metapercept Report");
+		spark.config().setReportName("kajal");
+		spark.config().setTheme(Theme.DARK);
+		//create the extent report
 		report = new ExtentReports();
-
-		//Config extent report
-		report.setSystemInfo("OS", "Windows 10");
-		report.setSystemInfo("Browser", "Chrome(Version 132.0.6834.160)");
+		//configure extent report
+		report.setSystemInfo("Os", "Window-11");
+		report.setSystemInfo("Browser", "Chrome-100");
 		
-		//Attach spark reporter to extent report
+		//Attach the spark reporter to the extent report
 		report.attachReporter(spark);
+		
 	}
 
 	@Override
