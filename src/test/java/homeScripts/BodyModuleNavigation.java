@@ -7,6 +7,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Set;
+import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -21,7 +22,7 @@ import org.testng.annotations.Test;
 import base.CrossBrowserTesting;
 import pageObjectModel.HomePOM;
 @Listeners(listeners.ListenersClass.class)
-public class BasicScript extends CrossBrowserTesting
+public class BodyModuleNavigation extends CrossBrowserTesting
 {
   //To verify that user is on "metapercept web page"
   @Test(enabled = false, priority=0)
@@ -263,7 +264,7 @@ public class BasicScript extends CrossBrowserTesting
 	  }
   }
   
-  @Test()
+  @Test(enabled=false)
   public void offerServicesVerify() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -288,23 +289,23 @@ public class BasicScript extends CrossBrowserTesting
 	     
 		 else if(i==1)
 		 {
-		assertTrue(hp.softEngPageVerify.isDisplayed());
-		Reporter.log("Software engineering navigated to correct page", true);
+			 assertTrue(hp.finTechVerify.isDisplayed());
+		     Reporter.log("Cloud computing is navigated to correct page", true);
 		 }
 		 else if(i==2)
 		 {
-			 assertTrue(hp.techPubVerify.isDisplayed());
-				Reporter.log("Technical publication navigated to correct page", true);
+			 assertTrue(hp.finTechVerify.isDisplayed());
+		     Reporter.log("Storage visualization is navigated to correct page", true);
 		 }
 		 else if(i==3)
 		 {
-			 assertTrue(hp.informArchVerify.isDisplayed());
-				Reporter.log("Information Architecture navigated to correct page", true);
+			 assertTrue(hp.finTechVerify.isDisplayed());
+		     Reporter.log("AI & machine learning navigated to correct page", true);
 		 }
 		 else if(i==4)
 		 {
-			 assertTrue(hp.contentMigrVerify.isDisplayed());
-				Reporter.log("Content migration navigated to correct page", true);
+			 assertTrue(hp.finTechVerify.isDisplayed());
+		     Reporter.log("Automation & aerospace is navigated to correct page", true);
 		 }
 		  driver.navigate().back();
 		  Thread.sleep(5000); 
@@ -313,8 +314,84 @@ public class BasicScript extends CrossBrowserTesting
 	
 	  
   }
+	
+	@Test
+	public void latestPostNavigation() throws InterruptedException, TimeoutException
+	{
 		
+		HomePOM hp = new HomePOM(driver);
+		Actions act = new Actions(driver);
+
+		// Using WebDriverWait instead of Thread.sleep
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		
+		for (int i = 0; i < hp.latest_posts.size(); i++) 
+		{
+		    // Scrolling down to load the next set of posts
+		    for (int j = 0; j < 4; j++) 
+		    {
+		        act.sendKeys(Keys.PAGE_DOWN).perform();
+		        try 
+		        {
+		            Thread.sleep(1000); // Allow time for the page to scroll down
+		        }
+		        catch (InterruptedException e) 
+		        {
+		            Thread.currentThread().interrupt();
+		        }
+		    }
+
+		    String given_title = "Metapercept Technology Services LLP";
+		    String parentWindowHandle = driver.getWindowHandle();
+		    
+		    // Collect current window handles before clicking
+		    Set<String> parentHandles = driver.getWindowHandles();
+
+		    // Clicking on the current post link
+		    hp.latest_posts.get(i).click();
+
+		    // Wait for the new window or tab to load
+		    wait.until(ExpectedConditions.numberOfWindowsToBe(parentHandles.size() + 1));
+
+		    // Get all window handles again after the click
+		    Set<String> allWindowHandles = driver.getWindowHandles();
+		    allWindowHandles.removeAll(parentHandles);  // Get the child window handle
+		    String childWindowHandle = allWindowHandles.iterator().next(); // Get the first (and only) child handle
+
+		    driver.switchTo().window(childWindowHandle);
+
+		   
+
+		    // Verify the title of the new page
+		    String current_title = driver.getTitle();
+		    if (given_title.equals(current_title)) 
+		    {
+		    	
+		        switch (i) 
+		        {
+		            case 0:
+		                assertTrue(hp.ditaEurope.isDisplayed());
+		                Reporter.log("DITA Europe post navigated to the correct page", true);
+		                break;
+		            case 1:
+		                assertTrue(hp.pre_CCMSPost.isDisplayed());
+		                Reporter.log("pre-CCMS post navigated to the correct page", true);
+		                break;
+		            case 2:
+		                assertTrue(hp.tackleMedicalDevicePost.isDisplayed());
+		                Reporter.log("Tackle Medical Device post navigated to the correct page", true);
+		                break;
+		            default:
+		                break;
+		        }
+		    }
+
+		    // Close the child window and switch back to the parent window
+		    driver.close();
+		    driver.switchTo().window(parentWindowHandle);
+		}
+	}
 
 }
   

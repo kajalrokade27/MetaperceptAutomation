@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="homeScripts.BasicScript">
+      <class name="homeScripts.FooterModuleNavigation">
         <methods>
-          <include name="offerServicesVerify"/>
-          <include name="preCondition"/>
           <include name="postCondition"/>
+          <include name="preCondition"/>
+          <include name="quickLinkNavigation"/>
         </methods>
-      </class> <!-- homeScripts.BasicScript -->
+      </class> <!-- homeScripts.FooterModuleNavigation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

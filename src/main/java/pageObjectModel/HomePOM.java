@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import action.ActionClass;
 import base.CrossBrowserTesting;
 
 public class HomePOM extends CrossBrowserTesting
@@ -113,15 +114,30 @@ public class HomePOM extends CrossBrowserTesting
    public @FindBy(xpath="//p[@class='jsx-6b05680bce022abf wow tpfadeUp solutionDesc mt-lg-0 mt-20 mb-20']")
    WebElement storageVis;
    
+   public @FindBy(xpath="//div[@class=\"jsx-58b7c5694f5c9b27 fix\"]")
+   List<WebElement> latest_posts;
+   
+   public @FindBy(xpath="//h2[contains(text(),'🌍 Metapercept at DITA Europe 2025!')]")
+   WebElement ditaEurope;
+   
+   public @FindBy(xpath="//h2[contains(text(),'Accelerate Your DITA Adoption with a Pre-CCMS Migr')]")
+   WebElement pre_CCMSPost;
+   
+   public @FindBy(xpath="//h2[contains(text(),'Tackling Medical Device Documentation Challenges H')]")
+   WebElement tackleMedicalDevicePost;
+   
+   
   
  
    public void minChatBoat()
    {
 	   min_chatboat.click();
+	   ActionClass.applyBorder(min_chatboat, "green");
    }
    public void ClickGetInTouch1()
    {
 	   get_in_touch1.click();
+	   
    }
    public void ClickGetInTouch2()
    {
@@ -146,6 +162,7 @@ public class HomePOM extends CrossBrowserTesting
    public void clickSingleCard1()
    {
 	   singleCard1.click();
+	  
    }
    public void clickSingleCard2()
    {
@@ -159,6 +176,8 @@ public class HomePOM extends CrossBrowserTesting
    {
 	   singleCard4.click();
    }
+   
+   
    
    
 //   public void clickSingleCard() throws InterruptedException, AWTException
@@ -183,5 +202,51 @@ public class HomePOM extends CrossBrowserTesting
    {
 	   home.click();
    }
+   
+   
+   
+   //Body modules
+   public @FindBy(id="EMAIL")
+   WebElement email;
+   
+   public @FindBy(xpath="//button[@aria-label='subscribe']")
+   WebElement subscribe;
+   
+   public @FindBy(xpath="//p[contains(text(),'Thank you for subscribing! ')]")
+   WebElement thankUPage;
+   
+   public @FindBy(xpath="//a[@class=\"font-12\"]")
+   List<WebElement> quickLinks;
+   
+   public @FindBy(xpath="//h1[@class='jsx-643036caf1458463 breadcrumb__title mb-10']")
+   WebElement AboutUsVerify;
+   
+   public @FindBy(xpath="//p[@class='mb-0']")
+   WebElement servicesVerify;
+   
+   public @FindBy(xpath="//h1[@class='jsx-643036caf1458463 breadcrumb__title mb-10']")
+   WebElement solutionsVerify;
+   
+   public @FindBy(xpath="//h1[@class='jsx-643036caf1458463 breadcrumb__title mb-10']")
+   WebElement contactUsVerify;
+   
+   public @FindBy(xpath="//h3[@class='breadcrumb__title']")
+   WebElement blogVerify;
+   
+   public @FindBy(xpath="//h2[normalize-space()='Category/Events']")
+   WebElement eventsVerify;
+   
+   public @FindBy(xpath="//h2[normalize-space()='Category/News']")
+   WebElement news;
+   
+   public @FindBy(xpath="//h1[@class='jsx-643036caf1458463 breadcrumb__title mb-10']")
+   WebElement glossary;
+   
+   
+   //Social links
+   public @FindBy(xpath="//a[@class=\"jsx-35cb58e8c8a8618a\"]")
+   List<WebElement> socialLinks;
+   
+   
    
 }

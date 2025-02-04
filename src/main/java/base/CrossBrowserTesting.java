@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import action.ActionClass;
 import fileUtility.GetPropertyData;
 import pageObjectModel.HomePOM;
 
@@ -48,6 +49,7 @@ public static WebDriver driver;
        driver.navigate().to(web_url);
 	
 		 HomePOM hp = new HomePOM(driver);
+		 
 		  hp.acceptCookies();
 		  Thread.sleep(5000);
 		  driver.switchTo().frame(hp.chatIframe);
