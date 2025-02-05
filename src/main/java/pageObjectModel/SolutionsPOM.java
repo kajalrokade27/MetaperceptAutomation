@@ -1,5 +1,6 @@
 package pageObjectModel;
 
-public class SolutionsPOM {
+public class SolutionsPOM 
+{
 
 }

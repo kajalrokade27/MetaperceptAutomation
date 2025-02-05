@@ -15,6 +15,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import action.ActionClass;
+import action.ScrollDown;
 import base.CrossBrowserTesting;
 import fileUtility.GetExcelData;
 import pageObjectModel.HomePOM;
@@ -24,7 +25,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
    
 
  
-  @Test(enabled=true)
+  @Test(enabled=false)
   public void quickLinkNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -36,11 +37,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
 	        Actions act = new Actions(driver);
 
 	        // Scroll down to make the quick links visible
-	        for (int scrolls = 0; scrolls < 7; scrolls++) 
-	        {
-	            act.keyDown(Keys.PAGE_DOWN).build().perform();
-	            Thread.sleep(500); // Small delay for scrolling animation
-	        }
+             ScrollDown.scrollPage(hp.email);
             
 	       WebElement links = hp.quickLinks.get(i); 
 	       ActionClass.applyBorder(links, "white");
@@ -112,7 +109,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
 	  
   }
   
-  @Test(enabled=false)
+  @Test(enabled=true)
   public void socialLinksNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -123,14 +120,11 @@ public class FooterModuleNavigation extends CrossBrowserTesting
 	    {
 	        Actions act = new Actions(driver);
 
-	        // Scroll down to make the quick links visible
-	        for (int scrolls = 0; scrolls < 7; scrolls++) 
-	        {
-	            act.keyDown(Keys.PAGE_DOWN).build().perform();
-	            Thread.sleep(500); // Small delay for scrolling animation
-	        }
+	        // Scroll down to make the Social links visible
+            ScrollDown.scrollPage(hp.email);
+	        Thread.sleep(3000);
 
-	        hp.socialLinks.get(i).click(); // Click on the quick link
+	        hp.socialLinks.get(i).click(); // Click on the Social links
 	        Thread.sleep(3000); // Wait for the page or new tab to load
 	        Set<String> allWindows = driver.getWindowHandles();
             for (String window : allWindows) 

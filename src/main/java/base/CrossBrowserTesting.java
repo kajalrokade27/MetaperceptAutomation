@@ -56,9 +56,9 @@ public static WebDriver driver;
 		 hp.minChatBoat();
 		 driver.switchTo().parentFrame();
 	}
-	@AfterClass
-	public void postCondition()
-	{
-		driver.close();
-	}
+//	@AfterClass
+//	public void postCondition()
+//	{
+//		driver.close();
+//	}
 }

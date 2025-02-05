@@ -2,6 +2,9 @@ package homeScripts;
 
 
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertNotEquals;
+
 import java.io.IOException;
 
 import java.util.Set;
@@ -12,33 +15,52 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import action.ScrollDown;
 import base.CrossBrowserTesting;
 import fileUtility.GetExcelData;
 import pageObjectModel.HomePOM;
 
 public class ValidateEmail extends CrossBrowserTesting
 {
-//	@DataProvider(name = "excelData")
-//    public Object[][] getData() throws IOException {
-//        // Provide the relative path to the Excel file in the resources folder
-//        return GetExcelData.Exceldata("Sheet1", 0, 0);
-//    }
-	  @Test(enabled= true)
-	  public void emailValidation() throws EncryptedDocumentException, IOException, InterruptedException
+	
+	@DataProvider(name = "excelData")
+	public Object[][] getData() throws IOException 
+	{
+		int row = GetExcelData.getRows("Sheet1");
+		System.out.println(row);
+		int column = GetExcelData.getCells("Sheet1");
+		System.out.println(column);
+      Object[][]obj=new Object[row][column];
+      for(int i=0; i<row; i++)
+      {
+    	  for(int j=0; j<column; j++)
+    	  {
+    	 obj[i][j]= GetExcelData.Exceldata("Sheet1", i, j); 
+    	  }
+      }
+      return obj;
+      
+      }
+	@Test(enabled= true, dataProvider = "excelData")
+	  public void emailValidation(String data1, String data2) throws EncryptedDocumentException, IOException, InterruptedException
 	  {
 		  HomePOM hp = new HomePOM(driver);
 		  Actions act = new Actions(driver);
-		  for (int i = 0; i < 6; i++) 
-		  {
-	          act.sendKeys(Keys.PAGE_DOWN).perform();
-	      }
+		  ScrollDown.scrollPage(hp.email);
 		  
 		  Thread.sleep(5000); 
-		  hp.email.sendKeys(GetExcelData.Exceldata("Sheet1", 1, 0));
-		  Thread.sleep(3000);
+		  hp.email.sendKeys(data1);
+		  Thread.sleep(3000);                          
 		  hp.subscribe.click();
+		  
+		if(hp.errorMail.isDisplayed()|| driver.getCurrentUrl().equals("https://metapercept.com/"))
+		{
+			Reporter.log("Email field does not accept the invalid email format",true);
+		}
+		else {
 		  
 		    String given_title = "Metapercept Technology Services LLP";
 			String parent = driver.getWindowHandle();
@@ -55,10 +77,14 @@ public class ValidateEmail extends CrossBrowserTesting
 				{
 		       if(hp.thankUPage.isDisplayed())
 		       {
-			  Reporter.log("Email field accepts the valid email format",true);
+			     Reporter.log("Email field accepts the valid email format",true);
 		       }
 			    }
+				
 		   }
+	       }
 	  }
+	
+	  
 	  
 }

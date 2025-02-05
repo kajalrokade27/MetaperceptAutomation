@@ -247,6 +247,8 @@ public class HomePOM extends CrossBrowserTesting
    public @FindBy(xpath="//a[@class=\"jsx-35cb58e8c8a8618a\"]")
    List<WebElement> socialLinks;
    
-   
+   //emails
+   public @FindBy(id="errorSubscribeEmail")
+   WebElement errorMail;
    
 }

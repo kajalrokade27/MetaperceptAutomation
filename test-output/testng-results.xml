@@ -2,30 +2,26 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Email field accepts the valid email format]]>
+      <![CDATA[Software Developement is navigated to destination]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-04T17:30:26 IST" name="Default suite" finished-at="2025-02-04T17:30:55 IST" duration-ms="29478">
+  <suite started-at="2025-02-05T17:49:40 IST" name="Default suite" finished-at="2025-02-05T17:51:16 IST" duration-ms="96549">
     <groups>
     </groups>
-    <test started-at="2025-02-04T17:30:26 IST" name="Default test" finished-at="2025-02-04T17:30:55 IST" duration-ms="29478">
-      <class name="homeScripts.ValidateEmail">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:homeScripts.ValidateEmail@4218d6a3]" started-at="2025-02-04T17:30:26 IST" name="preCondition" finished-at="2025-02-04T17:30:41 IST" duration-ms="15785" status="PASS">
+    <test started-at="2025-02-05T17:49:40 IST" name="Default test" finished-at="2025-02-05T17:51:16 IST" duration-ms="96549">
+      <class name="servicesScripts.SoftwareDevValidation">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:servicesScripts.SoftwareDevValidation@47eaca72]" started-at="2025-02-05T17:49:40 IST" name="preCondition" finished-at="2025-02-05T17:50:48 IST" duration-ms="68548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="emailValidation()[pri:0, instance:homeScripts.ValidateEmail@4218d6a3]" started-at="2025-02-04T17:30:41 IST" name="emailValidation" finished-at="2025-02-04T17:30:55 IST" duration-ms="13588" status="PASS">
+        <test-method signature="SoftDeValidation()[pri:0, instance:servicesScripts.SoftwareDevValidation@47eaca72]" started-at="2025-02-05T17:50:48 IST" name="SoftDeValidation" finished-at="2025-02-05T17:51:16 IST" duration-ms="27948" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Email field accepts the valid email format]]>
+              <![CDATA[Software Developement is navigated to destination]]>
             </line>
           </reporter-output>
-        </test-method> <!-- emailValidation -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:homeScripts.ValidateEmail@4218d6a3]" started-at="2025-02-04T17:30:55 IST" name="postCondition" finished-at="2025-02-04T17:30:55 IST" duration-ms="69" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postCondition -->
-      </class> <!-- homeScripts.ValidateEmail -->
+        </test-method> <!-- SoftDeValidation -->
+      </class> <!-- servicesScripts.SoftwareDevValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

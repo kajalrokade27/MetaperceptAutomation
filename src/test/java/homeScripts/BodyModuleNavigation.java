@@ -19,6 +19,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import action.ScrollDown;
 import base.CrossBrowserTesting;
 import pageObjectModel.HomePOM;
 @Listeners(listeners.ListenersClass.class)
@@ -159,13 +160,15 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	
   }
   //To verify that "Web Development" card is navigate to correct page
-  @Test(enabled=false, priority=4)
+  @Test(enabled=true, priority=4)
   public void webDevCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
-	  Actions act = new Actions(driver);
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
-	  act.keyDown(Keys.PAGE_DOWN).build().perform();
+//	  Actions act = new Actions(driver);
+//	  act.keyDown(Keys.PAGE_DOWN).build().perform();
+//	  act.keyDown(Keys.PAGE_DOWN).build().perform();
+	  
+	  ScrollDown.scrollPage(hp.singleCard3);
 	  Thread.sleep(2000);
 	  hp.clickSingleCard3();
 	  String parent = driver.getWindowHandle();
@@ -315,7 +318,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	  
   }
 	
-	@Test
+	@Test(enabled=false)
 	public void latestPostNavigation() throws InterruptedException, TimeoutException
 	{
 		

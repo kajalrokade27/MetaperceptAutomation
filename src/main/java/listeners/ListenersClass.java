@@ -30,6 +30,7 @@ public class ListenersClass extends CrossBrowserTesting implements ITestListener
 		String name = result.getMethod().getMethodName();
 		Reporter.log(name+" is executing",true);
 		test= report.createTest(name);
+		 
 		
 	}
 
@@ -48,6 +49,7 @@ public class ListenersClass extends CrossBrowserTesting implements ITestListener
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		String screenshot = ts.getScreenshotAs(OutputType.BASE64);
 		test.addScreenCaptureFromBase64String(screenshot);
+		 
 		
 	}
 
