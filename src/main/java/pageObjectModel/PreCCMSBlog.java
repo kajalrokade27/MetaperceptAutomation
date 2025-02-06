@@ -27,4 +27,6 @@ public class PreCCMSBlog
  
  public @FindBy(xpath="//a[normalize-space()='Download White Paper']")
  WebElement download_paper;
+ 
+ public String preccms_url = "https://blog.metapercept.com/highlight-single/accelerate-your-dita-adoption-with-a-pre-ccms-migration-framework";
 }

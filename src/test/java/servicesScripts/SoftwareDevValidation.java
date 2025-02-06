@@ -32,6 +32,26 @@ public class SoftwareDevValidation extends CrossBrowserTesting
 		   ScrollDown.scrollPage(sp.block_elements.get(0));
 		   Thread.sleep(3000);
 		   sp.block_elements.get(i).click();
+		   if(i==0)
+		   {
+			   assertTrue(sp.WebDevPage.isDisplayed());
+			   Reporter.log("Web Development blog is navigated to correct page",true);
+		   }
+		   if(i==1)
+		   {
+			   assertTrue(sp.customEngPage.isDisplayed());
+			   Reporter.log("Custom Engineering  blog is navigated to correct page",true);
+		   }
+		   if(i==2)
+		   {
+			   assertTrue(sp.applIntPage.isDisplayed());
+			   Reporter.log("Application integration blog is navigated to correct page",true);
+		   }
+		   if(i==3)
+		   {
+			   assertTrue(sp.docOpsPage.isDisplayed());
+			   Reporter.log("DocOps blog is navigated to correct page",true);
+		   }
 		   Thread.sleep(3000);
 		   driver.navigate().back();
 	   }

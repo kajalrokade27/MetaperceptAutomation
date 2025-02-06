@@ -2,26 +2,44 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Software Developement is navigated to destination]]>
+      <![CDATA[latestPostNavigation is executing]]>
+    </line>
+    <line>
+      <![CDATA[DITA Europe post navigated to the correct page]]>
+    </line>
+    <line>
+      <![CDATA[pre-CCMS post navigated to the correct page]]>
+    </line>
+    <line>
+      <![CDATA[Tackle Medical Device post navigated to the correct page]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-05T17:49:40 IST" name="Default suite" finished-at="2025-02-05T17:51:16 IST" duration-ms="96549">
+  <suite started-at="2025-02-06T17:39:18 IST" name="Default suite" finished-at="2025-02-06T17:39:50 IST" duration-ms="31977">
     <groups>
     </groups>
-    <test started-at="2025-02-05T17:49:40 IST" name="Default test" finished-at="2025-02-05T17:51:16 IST" duration-ms="96549">
-      <class name="servicesScripts.SoftwareDevValidation">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:servicesScripts.SoftwareDevValidation@47eaca72]" started-at="2025-02-05T17:49:40 IST" name="preCondition" finished-at="2025-02-05T17:50:48 IST" duration-ms="68548" status="PASS">
+    <test started-at="2025-02-06T17:39:18 IST" name="Default test" finished-at="2025-02-06T17:39:50 IST" duration-ms="31977">
+      <class name="homeScripts.BodyModuleNavigation">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:homeScripts.BodyModuleNavigation@7b98f307]" started-at="2025-02-06T17:39:19 IST" name="preCondition" finished-at="2025-02-06T17:39:34 IST" duration-ms="15423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="SoftDeValidation()[pri:0, instance:servicesScripts.SoftwareDevValidation@47eaca72]" started-at="2025-02-05T17:50:48 IST" name="SoftDeValidation" finished-at="2025-02-05T17:51:16 IST" duration-ms="27948" status="PASS">
+        <test-method signature="latestPostNavigation()[pri:0, instance:homeScripts.BodyModuleNavigation@7b98f307]" started-at="2025-02-06T17:39:34 IST" name="latestPostNavigation" finished-at="2025-02-06T17:39:50 IST" duration-ms="16243" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Software Developement is navigated to destination]]>
+              <![CDATA[latestPostNavigation is executing]]>
+            </line>
+            <line>
+              <![CDATA[DITA Europe post navigated to the correct page]]>
+            </line>
+            <line>
+              <![CDATA[pre-CCMS post navigated to the correct page]]>
+            </line>
+            <line>
+              <![CDATA[Tackle Medical Device post navigated to the correct page]]>
             </line>
           </reporter-output>
-        </test-method> <!-- SoftDeValidation -->
-      </class> <!-- servicesScripts.SoftwareDevValidation -->
+        </test-method> <!-- latestPostNavigation -->
+      </class> <!-- homeScripts.BodyModuleNavigation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

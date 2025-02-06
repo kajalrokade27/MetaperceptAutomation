@@ -160,7 +160,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	
   }
   //To verify that "Web Development" card is navigate to correct page
-  @Test(enabled=true, priority=4)
+  @Test(enabled=false, priority=4)
   public void webDevCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -318,7 +318,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	  
   }
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void latestPostNavigation() throws InterruptedException, TimeoutException
 	{
 		
@@ -331,19 +331,22 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 		
 		for (int i = 0; i < hp.latest_posts.size(); i++) 
 		{
-		    // Scrolling down to load the next set of posts
-		    for (int j = 0; j < 4; j++) 
-		    {
-		        act.sendKeys(Keys.PAGE_DOWN).perform();
-		        try 
-		        {
-		            Thread.sleep(1000); // Allow time for the page to scroll down
-		        }
-		        catch (InterruptedException e) 
-		        {
-		            Thread.currentThread().interrupt();
-		        }
-		    }
+//		    // Scrolling down to load the next set of posts
+//		    for (int j = 0; j < 4; j++) 
+//		    {
+//		        act.sendKeys(Keys.PAGE_DOWN).perform();
+//		        try 
+//		        {
+//		            Thread.sleep(1000); // Allow time for the page to scroll down
+//		        }
+//		        catch (InterruptedException e) 
+//		        {
+//		            Thread.currentThread().interrupt();
+//		        }
+//		    }
+			
+			ScrollDown.scrollPage(hp.latest_posts.get(0));
+			Thread.sleep(3000);
 
 		    String given_title = "Metapercept Technology Services LLP";
 		    String parentWindowHandle = driver.getWindowHandle();

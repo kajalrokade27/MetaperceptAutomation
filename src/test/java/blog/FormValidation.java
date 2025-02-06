@@ -1,9 +1,15 @@
 package blog;
 
+import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Set;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -33,7 +39,7 @@ public class FormValidation extends CrossBrowserTesting
       
       }
   @Test(dataProvider = "excelData")
-  public void validateFields(String data1, String data2) throws InterruptedException
+  public void validateFields(String data1, String data2) throws InterruptedException, IOException
   {
 	  PreCCMSBlog pb = new PreCCMSBlog(driver);
 	  ScrollDown.scrollPage(pb.preccms_blog);
@@ -76,7 +82,15 @@ public class FormValidation extends CrossBrowserTesting
 	     pb.checkbox.click();
 		 pb.submit_buton.click();
 		 Thread.sleep(4000);
-		 
+         
+		
+		    LocalDateTime date = LocalDateTime.now();
+			String current_date = date.toString().replace(":", "-");
+		    TakesScreenshot ts = (TakesScreenshot)driver;
+			File from = ts.getScreenshotAs(OutputType.FILE);
+			File to = new File("C:\\Users\\Admin\\eclipse-workspace\\com.crm.metapercept\\BlogFormScreenshots\\failedScreenshot"+current_date+".png");
+		    FileHandler.copy(from, to);
+		   Reporter.log("Fields acccepts invalid input" ,true);
 		 
 		 
 	  }
