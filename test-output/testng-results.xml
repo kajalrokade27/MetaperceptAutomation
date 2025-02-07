@@ -2,44 +2,50 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[latestPostNavigation is executing]]>
+      <![CDATA[Consulting  is navigating to correct page]]>
     </line>
     <line>
-      <![CDATA[DITA Europe post navigated to the correct page]]>
+      <![CDATA[Read more button of information architecture navigated to its destination]]>
     </line>
     <line>
-      <![CDATA[pre-CCMS post navigated to the correct page]]>
+      <![CDATA[Read more button of content migration is navigated to its destination]]>
     </line>
     <line>
-      <![CDATA[Tackle Medical Device post navigated to the correct page]]>
+      <![CDATA[Read more button of content strategy navigated to its destination]]>
+    </line>
+    <line>
+      <![CDATA[Read more button of staff augmentation is navigated to its destination]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-06T17:39:18 IST" name="Default suite" finished-at="2025-02-06T17:39:50 IST" duration-ms="31977">
+  <suite started-at="2025-02-07T15:29:05 IST" name="Default suite" finished-at="2025-02-07T15:29:55 IST" duration-ms="50736">
     <groups>
     </groups>
-    <test started-at="2025-02-06T17:39:18 IST" name="Default test" finished-at="2025-02-06T17:39:50 IST" duration-ms="31977">
-      <class name="homeScripts.BodyModuleNavigation">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:homeScripts.BodyModuleNavigation@7b98f307]" started-at="2025-02-06T17:39:19 IST" name="preCondition" finished-at="2025-02-06T17:39:34 IST" duration-ms="15423" status="PASS">
+    <test started-at="2025-02-07T15:29:05 IST" name="Default test" finished-at="2025-02-07T15:29:55 IST" duration-ms="50736">
+      <class name="SolutionsScripts.ConsultingValidation">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:SolutionsScripts.ConsultingValidation@47eaca72]" started-at="2025-02-07T15:29:05 IST" name="preCondition" finished-at="2025-02-07T15:29:26 IST" duration-ms="21265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="latestPostNavigation()[pri:0, instance:homeScripts.BodyModuleNavigation@7b98f307]" started-at="2025-02-06T17:39:34 IST" name="latestPostNavigation" finished-at="2025-02-06T17:39:50 IST" duration-ms="16243" status="PASS">
+        <test-method signature="informArchValidation()[pri:0, instance:SolutionsScripts.ConsultingValidation@47eaca72]" started-at="2025-02-07T15:29:26 IST" name="informArchValidation" finished-at="2025-02-07T15:29:55 IST" duration-ms="29429" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[latestPostNavigation is executing]]>
+              <![CDATA[Consulting  is navigating to correct page]]>
             </line>
             <line>
-              <![CDATA[DITA Europe post navigated to the correct page]]>
+              <![CDATA[Read more button of information architecture navigated to its destination]]>
             </line>
             <line>
-              <![CDATA[pre-CCMS post navigated to the correct page]]>
+              <![CDATA[Read more button of content migration is navigated to its destination]]>
             </line>
             <line>
-              <![CDATA[Tackle Medical Device post navigated to the correct page]]>
+              <![CDATA[Read more button of content strategy navigated to its destination]]>
+            </line>
+            <line>
+              <![CDATA[Read more button of staff augmentation is navigated to its destination]]>
             </line>
           </reporter-output>
-        </test-method> <!-- latestPostNavigation -->
-      </class> <!-- homeScripts.BodyModuleNavigation -->
+        </test-method> <!-- informArchValidation -->
+      </class> <!-- SolutionsScripts.ConsultingValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
