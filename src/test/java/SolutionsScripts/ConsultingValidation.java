@@ -17,12 +17,12 @@ public class ConsultingValidation extends CrossBrowserTesting
 	  {
 		  SolutionsPOM sp = new SolutionsPOM(driver);
 		  Actions act = new Actions(driver);
-		  act.moveToElement(sp.solutions).build().perform();;
+		  act.moveToElement(sp.solutions).build().perform();
 		  Thread.sleep(2000);
 		  sp.consulting.click();
 		  Thread.sleep(2000);
-		 assertTrue(sp.consultingPage.isDisplayed());
-		 Reporter.log("Consulting  is navigating to correct page", true);
+		  assertTrue(sp.consultingPage.isDisplayed());
+		  Reporter.log("Consulting  is navigating to correct page", true);
 		 
 		 for(int i=0; i<sp.readMore.size(); i++)
 		 {

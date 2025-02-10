@@ -26,7 +26,7 @@ import pageObjectModel.HomePOM;
 public class BodyModuleNavigation extends CrossBrowserTesting
 {
   //To verify that user is on "metapercept web page"
-  @Test(enabled = false, priority=0)
+  @Test(enabled = true, priority=0)
   public void verifyMetaWebpage() 
   {
 	 String given_url = "https://metapercept.com/"; 
@@ -40,7 +40,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
   //To verify that "Get In Touch" Element is navigate to correct page (contact page)
   //To verify that "Software Development " is navigate to respective page
   //To verify that "Technical writer" is navigate to correct page
-  @Test(enabled=false, priority=1)
+  @Test(enabled=true, priority=1)
   public void verifyGetInTouchNavigation() throws InterruptedException, AWTException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -71,7 +71,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
   
 	    driver.navigate().back();
   }
-	    @Test (enabled=false)
+	    @Test (enabled=true)
 	    public void verifySoftDevNTechWriterNavigation() throws InterruptedException, AWTException
 	    {
 	    	HomePOM hp = new HomePOM(driver);
@@ -108,7 +108,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
   
   
   //To verify that "Information architecture " card navigate is correct page
-  @Test(enabled=false, priority=2)
+  @Test(enabled=true, priority=2)
   public void informArchitectureCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -134,7 +134,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	  
   }
   //To verify that "Technical Publication" card is navigate to correct page
-  @Test(enabled=false, priority=3)
+  @Test(enabled=true, priority=3)
   public void techPublicationCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -160,7 +160,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	
   }
   //To verify that "Web Development" card is navigate to correct page
-  @Test(enabled=false, priority=4)
+  @Test(enabled=true, priority=4)
   public void webDevCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -189,7 +189,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	
   }
   //To verify that the "Application Integration" card is navigate to correct page
-  @Test(enabled=false, priority=5)
+  @Test(enabled=true, priority=5)
   public void applIntegrationCardNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -216,7 +216,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	
   }
   
-  @Test(enabled = false)
+  @Test(enabled = true, priority=6)
   public void weProvideElementsVerify() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -267,7 +267,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	  }
   }
   
-  @Test(enabled=false)
+  @Test(enabled=true, priority=7)
   public void offerServicesVerify() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -318,7 +318,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 	  
   }
 	
-	@Test(enabled=true)
+	@Test(enabled=true, priority=8)
 	public void latestPostNavigation() throws InterruptedException, TimeoutException
 	{
 		

@@ -25,7 +25,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
    
 
  
-  @Test(enabled=false)
+  @Test(enabled=true)
   public void quickLinkNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -109,7 +109,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
 	  
   }
   
-  @Test(enabled=true)
+  @Test(enabled=false)
   public void socialLinksNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);

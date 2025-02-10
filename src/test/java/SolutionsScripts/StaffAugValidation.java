@@ -16,7 +16,7 @@ public class StaffAugValidation extends CrossBrowserTesting
  {
 	 SolutionsPOM sp = new SolutionsPOM(driver);
 	  Actions act = new Actions(driver);
-	  act.moveToElement(sp.solutions).build().perform();;
+	  act.moveToElement(sp.solutions).build().perform();
 	  Thread.sleep(2000);
 	  sp.staffAug.click();
 	  Thread.sleep(2000);

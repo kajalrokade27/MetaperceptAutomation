@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SolutionsScripts.ConsultingValidation">
+      <class name="aboutUsScripts.AboutUsValidation">
         <methods>
-          <include name="informArchValidation"/>
           <include name="preCondition"/>
+          <include name="aboutUsValidation"/>
         </methods>
-      </class> <!-- SolutionsScripts.ConsultingValidation -->
+      </class> <!-- aboutUsScripts.AboutUsValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
