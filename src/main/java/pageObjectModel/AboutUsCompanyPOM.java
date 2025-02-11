@@ -31,6 +31,11 @@ public class AboutUsCompanyPOM
   public @FindBy(xpath="//img[contains(@alt,'Metapercept_logo')]")
   WebElement meta_logo;
   
+  
+  
+  public @FindBy(xpath="//li[@role=\"presentation\"]")
+  List<WebElement> membershipNindustries;
+  
   public @FindBy(xpath="//button[normalize-space()='NASSCOM']")
   WebElement nasscom;
   
