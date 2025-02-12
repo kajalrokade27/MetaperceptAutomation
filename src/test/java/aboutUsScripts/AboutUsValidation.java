@@ -52,6 +52,7 @@ public class AboutUsValidation extends CrossBrowserTesting
 		 }
 		 Thread.sleep(4000);
 		 ap.meta_logo.click();
+		 
 		 }
 		 driver.switchTo().window(parent);
 		 Thread.sleep(2000);

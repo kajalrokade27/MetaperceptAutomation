@@ -91,6 +91,9 @@ public class FormValidation extends CrossBrowserTesting
 			File to = new File("C:\\Users\\Admin\\eclipse-workspace\\com.crm.metapercept\\BlogFormScreenshots\\failedScreenshot"+current_date+".png");
 		    FileHandler.copy(from, to);
 		   Reporter.log("Fields acccepts invalid input" ,true);
+		   
+		   
+		
 		 
 		 
 	  }
