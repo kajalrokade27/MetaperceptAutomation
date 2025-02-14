@@ -19,6 +19,11 @@ public class HomePOM extends CrossBrowserTesting
    {
 	   PageFactory.initElements(driver, this);
    }
+   public @FindBy(xpath="//i[@class=\"material-icons\"]")
+   WebElement search_button;
+   
+   public @FindBy(xpath="//input[@placeholder=\"What you are looking for ?\"]")
+   WebElement search_field;
    
    private @FindBy(xpath="//div[@id=\"min_window\"]")
    WebElement min_chatboat;

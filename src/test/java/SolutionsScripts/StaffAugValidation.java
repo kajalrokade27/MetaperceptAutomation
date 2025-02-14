@@ -4,11 +4,12 @@ import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.CrossBrowserTesting;
 import pageObjectModel.SolutionsPOM;
-
+@Listeners(listeners.ListenersClass.class)
 public class StaffAugValidation extends CrossBrowserTesting
 {
  @Test

@@ -10,12 +10,13 @@ import org.openqa.selenium.interactions.Actions;
 
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import action.ScrollDown;
 import base.CrossBrowserTesting;
 import pageObjectModel.AboutUsBlogs;
-
+@Listeners(listeners.ListenersClass.class)
 public class AboutUsBlogsValidation extends CrossBrowserTesting
 {
  @Test(enabled=false)

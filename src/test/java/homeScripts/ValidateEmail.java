@@ -22,7 +22,7 @@ import action.ScrollDown;
 import base.CrossBrowserTesting;
 import fileUtility.GetExcelData;
 import pageObjectModel.HomePOM;
-
+@Listeners(listeners.ListenersClass.class)
 public class ValidateEmail extends CrossBrowserTesting
 {
 	

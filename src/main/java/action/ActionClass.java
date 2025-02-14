@@ -1,12 +1,12 @@
 package action;
 
-import java.lang.System.Logger;
 
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import base.CrossBrowserTesting;
 
@@ -21,6 +21,10 @@ public class ActionClass extends CrossBrowserTesting
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript(script, element);
 //			Logger.info("Applied the border with color" + color + " to element: " + getElementDescription(by));
-		
+	}
+	public String returnText(WebElement web)
+	{
+		String text = web.getText();
+		return text;
 	}
 }

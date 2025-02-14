@@ -11,13 +11,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import action.ScrollDown;
 import base.CrossBrowserTesting;
 import fileUtility.GetExcelData;
 import pageObjectModel.PreCCMSBlog;
-
+@Listeners(listeners.ListenersClass.class)
 public class FormValidation extends CrossBrowserTesting
 {
 	@DataProvider(name = "excelData")

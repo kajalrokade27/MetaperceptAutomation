@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="contactUsScripts.ContactUsFormValidation">
+      <class name="homeScripts.SearchFieldValidation">
         <methods>
-          <include name="formValidation"/>
           <include name="preCondition"/>
+          <include name="positiveTesting"/>
         </methods>
-      </class> <!-- contactUsScripts.ContactUsFormValidation -->
+      </class> <!-- homeScripts.SearchFieldValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

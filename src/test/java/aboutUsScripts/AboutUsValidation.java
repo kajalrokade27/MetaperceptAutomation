@@ -5,12 +5,13 @@ import static org.testng.Assert.assertTrue;
 import java.util.Set;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import action.ScrollDown;
 import base.CrossBrowserTesting;
 import pageObjectModel.AboutUsPOM;
-
+@Listeners(listeners.ListenersClass.class)
 public class AboutUsValidation extends CrossBrowserTesting
 {
   @Test
