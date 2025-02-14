@@ -16,7 +16,7 @@ public class ContactUsPOM
    public @FindBy(xpath="//a[@class='headerA'][normalize-space()='Contact Us']")
    WebElement contactUs;
    
-   public @FindBy(xpath="//div[@class=\"jsx-74fbd9796a6f9252\"]//div[2]")
+   public @FindBy(xpath="//input[@class=\"jsx-74fbd9796a6f9252\"]")
    List<WebElement> formFileds;
    
 }

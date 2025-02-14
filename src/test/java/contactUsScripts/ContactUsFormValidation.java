@@ -22,11 +22,30 @@ public class ContactUsFormValidation extends CrossBrowserTesting
 	  
 	 
 		 
-	  for(int i=1; i<cp.formFileds.size(); i++)
+	  for(int i=5; i<cp.formFileds.size()-2; i++)
 	  {
 		  ScrollDown.scrollPage(cp.formFileds.get(i));
 		  Thread.sleep(4000);
+		  if(i==5)
+		  {
 		  cp.formFileds.get(i).sendKeys("vishal");
+		  }
+		  else if(i==6)
+		  {
+			  cp.formFileds.get(i).sendKeys("satpute");
+		  }
+		  else if(i==7)
+		  {
+			  cp.formFileds.get(i).sendKeys("9876543210");
+		  }
+		  else if(i==8)
+		  {
+			  cp.formFileds.get(i).sendKeys("kajal@gmail.com"); 
+		  }
+		  else if(i==9)
+		  {
+			  cp.formFileds.get(i).sendKeys("vishal");
+		  }
 		  Thread.sleep(2000);
 	  }
 	  
