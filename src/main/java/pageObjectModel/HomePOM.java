@@ -19,6 +19,10 @@ public class HomePOM extends CrossBrowserTesting
    {
 	   PageFactory.initElements(driver, this);
    }
+   
+   public @FindBy(xpath="//nav[@id='mobile-menu']//a[normalize-space()='Home']")
+   WebElement home2;
+   
    public @FindBy(xpath="//i[@class=\"material-icons\"]")
    WebElement search_button;
    
@@ -41,13 +45,28 @@ public class HomePOM extends CrossBrowserTesting
    public @FindBy(css="h1[class=\"jsx-643036caf1458463 breadcrumb__title mb-10\"]")
    WebElement contact_page_title;
    
-   private @FindBy(xpath="//button[@id=\"rcc-confirm-button\"]")
+   public @FindBy(xpath="//button[@id=\"rcc-confirm-button\"]")
    WebElement acceptAll;
+   
+   public @FindBy(xpath="//button[@id='rcc-decline-button']")
+   WebElement reject_all;
+   
+   public @FindBy(xpath="//a[@class='subscribe-link']")
+   WebElement subscribe_BodySection;
+   
+   public @FindBy(xpath="//em[@id='zsiq_agtpic']")
+   WebElement chatBoat;
+   
+   public @FindBy(xpath="//em[@id='zsiq_agtpic']")
+   WebElement enterSearchText;
+   
+   public @FindBy(xpath="//em[@id='zsiq_agtpic']")
+   WebElement send_button;
    
    public @FindBy(xpath="//h1[@class=\"jsx-643036caf1458463 breadcrumb__title mb-10\"]")
    WebElement softwareDevTitle;
    
-   private @FindBy(xpath="(//h2[@class=\"jsx-2b8dbe08890aa52f ca-service__item-title mb-10 \"])[1]")
+   public @FindBy(xpath="(//h2[@class=\"jsx-2b8dbe08890aa52f ca-service__item-title mb-10 \"])[1]")
    WebElement softwareDev;
    
    private @FindBy(xpath="(//p[@class=\"jsx-2b8dbe08890aa52f mb-0\"])[2]")
@@ -71,7 +90,7 @@ public class HomePOM extends CrossBrowserTesting
    public @FindBy(xpath="//a[text()='solutions']")
    WebElement solutions;
    
-   private @FindBy(xpath="(//a[text()='Home'])[1]")
+   public @FindBy(xpath="(//a[text()='Home'])[1]")
    WebElement home;
    
    public @FindBy(xpath="//button[@class=\"active\"]")
@@ -248,12 +267,31 @@ public class HomePOM extends CrossBrowserTesting
    WebElement glossary;
    
    
-   //Social links
+   //footer modules Social links
    public @FindBy(xpath="//a[@class=\"jsx-35cb58e8c8a8618a\"]")
    List<WebElement> socialLinks;
+   
+   public @FindBy(xpath="(//a[@class=\"font-12\"])[8]")
+   WebElement glossary_footer;
+   
+   public @FindBy(xpath="//input[@class=\"jsx-a4829e4f91684617\"]")
+   List<WebElement> filters;
+   
+   public @FindBy(xpath="//li[@class=\"me-0\"]")
+   List<WebElement> footer_modules;
+   
+   
+   
    
    //emails
    public @FindBy(id="errorSubscribeEmail")
    WebElement errorMail;
+   
+   //Scroll up icon
+   
+   public @FindBy(xpath="//button[@aria-label='Go Top']")
+   WebElement scroll_up_icon;
+   
+   
    
 }

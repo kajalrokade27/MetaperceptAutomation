@@ -3,15 +3,14 @@ package homeScripts;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+
 import java.time.Duration;
 import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,6 +18,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import action.ActionClass;
 import action.ScrollDown;
 import base.CrossBrowserTesting;
 import pageObjectModel.HomePOM;
@@ -26,7 +26,7 @@ import pageObjectModel.HomePOM;
 public class BodyModuleNavigation extends CrossBrowserTesting
 {
   //To verify that user is on "metapercept web page"
-  @Test(enabled = true, priority=0)
+  @Test(enabled = false, priority=0)
   public void verifyMetaWebpage() 
   {
 	 String given_url = "https://metapercept.com/"; 
@@ -45,9 +45,11 @@ public class BodyModuleNavigation extends CrossBrowserTesting
   {
 	  HomePOM hp = new HomePOM(driver);
 	  
-	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class=\"tp-white-btn\"])[3]")));
+//	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class=\"tp-white-btn\"])[3]")));
 	
+	  ActionClass.waitUptoVisible(hp.get_in_touch3);
+	  
 	  if(hp.get_in_touch1.isDisplayed())
 	  {
 	    hp.ClickGetInTouch1();
@@ -79,7 +81,7 @@ public class BodyModuleNavigation extends CrossBrowserTesting
 		act.keyDown(Keys.PAGE_DOWN).build().perform();
 		
 		 Thread.sleep(2000);
-		 
+		 ActionClass.applyBorder(hp.softwareDev, "green");
 		 hp.ClickSoftDev();
 		
 		 

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,7 +20,6 @@ import pageObjectModel.HomePOM;
 public class CrossBrowserTesting 
 {
 public static WebDriver driver;
-	
 	@BeforeMethod
 	public void preCondition() throws IOException, InterruptedException
 	{
@@ -48,13 +49,13 @@ public static WebDriver driver;
        //Enter into web application
        driver.navigate().to(web_url);
 	
-		 HomePOM hp = new HomePOM(driver);
-		 
+		  HomePOM hp = new HomePOM(driver);
+		  ActionClass.applyBorder(hp.acceptAll, "green");
 		  hp.acceptCookies();
-		  Thread.sleep(5000);
+		  ActionClass.waitUptoVisible(hp.chatIframe);
 		  driver.switchTo().frame(hp.chatIframe);
-		 hp.minChatBoat();
-		 driver.switchTo().parentFrame();
+		  hp.minChatBoat();
+		  driver.switchTo().parentFrame();
 	}
 //	@AfterClass
 //	public void postCondition()

@@ -39,6 +39,7 @@ public class ListenersClass extends CrossBrowserTesting implements ITestListener
 	{
 		String name = result.getMethod().getMethodName();
 		test.log(Status.PASS, name+ " is executed successfully");
+		Reporter.log(name+" is executed successfully",true);
 	}
 
 	@Override

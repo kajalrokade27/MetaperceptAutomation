@@ -2,8 +2,10 @@ package blog;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.System.Logger;
 import java.time.LocalDateTime;
 import java.util.Set;
+import java.util.logging.LogManager;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,6 +23,8 @@ import pageObjectModel.PreCCMSBlog;
 @Listeners(listeners.ListenersClass.class)
 public class FormValidation extends CrossBrowserTesting
 {
+	
+	
 	@DataProvider(name = "excelData")
 	public Object[][] getData() throws IOException 
 	{
@@ -93,9 +97,8 @@ public class FormValidation extends CrossBrowserTesting
 		    FileHandler.copy(from, to);
 		   Reporter.log("Fields acccepts invalid input" ,true);
 		   
-		   
 		
-		 
+		    
 		 
 	  }
 	  

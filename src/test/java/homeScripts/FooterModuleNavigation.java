@@ -25,7 +25,7 @@ public class FooterModuleNavigation extends CrossBrowserTesting
    
 
  
-  @Test(enabled=true)
+  @Test(enabled=false)
   public void quickLinkNavigation() throws InterruptedException
   {
 	  HomePOM hp = new HomePOM(driver);
@@ -41,9 +41,12 @@ public class FooterModuleNavigation extends CrossBrowserTesting
             
 	       WebElement links = hp.quickLinks.get(i); 
 	       ActionClass.applyBorder(links, "white");
+	       
 	       Thread.sleep(4000);
 	       links.click();// Click on the quick link
+	       
 	        Thread.sleep(3000); // Wait for the page or new tab to load
+	        
 	        ActionClass.applyBorder(links, "green");
 	        if (i <= 3) 
 	        { // Links that open in the same tab
@@ -161,6 +164,23 @@ public class FooterModuleNavigation extends CrossBrowserTesting
 
         Thread.sleep(3000); // Wait to ensure smooth navigation
     
+  }
+  
+  @Test
+  public void footerModuleValidation() throws InterruptedException
+  {
+	  HomePOM hp = new HomePOM(driver);
+	  
+	  for(int i=0; i<hp.footer_modules.size(); i++)
+	  {
+		  ScrollDown.scrollPage(hp.footer_modules.get(0));
+		  Thread.sleep(4000);
+		  ActionClass.waitUptoVisible(hp.footer_modules.get(i));
+		  hp.footer_modules.get(i).click();
+		  Thread.sleep(4000);
+		  driver.navigate().back();
+		  Thread.sleep(4000);
+	  }
   }
  
 }

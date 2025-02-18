@@ -1,16 +1,10 @@
 package homeScripts;
-
-
-
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertNotEquals;
-
 import java.io.IOException;
 
 import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.interactions.Actions;
 
 import org.testng.Reporter;
@@ -48,7 +42,7 @@ public class ValidateEmail extends CrossBrowserTesting
 	  public void emailValidation(String data1, String data2) throws EncryptedDocumentException, IOException, InterruptedException
 	  {
 		  HomePOM hp = new HomePOM(driver);
-		  Actions act = new Actions(driver);
+		 
 		  ScrollDown.scrollPage(hp.email);
 		  
 		  Thread.sleep(5000); 
@@ -63,7 +57,7 @@ public class ValidateEmail extends CrossBrowserTesting
 		else {
 		  
 		    String given_title = "Metapercept Technology Services LLP";
-			String parent = driver.getWindowHandle();
+			
 			
 			Set<String> child = driver.getWindowHandles();
 		
