@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="aboutUsScripts.AboutUsValidation">
+        <methods>
+          <include name="aboutUsValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsValidation -->
+      <class name="aboutUsScripts.AboutUsBlogsValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="postCategoriesValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsBlogsValidation -->
+      <class name="aboutUsScripts.PartnersValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="partnersValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.PartnersValidation -->
+      <class name="aboutUsScripts.CompanyMValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="companyValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.CompanyMValidation -->
+      <class name="aboutUsScripts.AboutUsPortfolioValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="aboutUsPortfolioValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsPortfolioValidation -->
+      <class name="aboutUsScripts.AboutUsCareersValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="aboutUsCareerValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsCareersValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [ParallelSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="aboutUsScripts.AboutUsValidation">
+        <methods>
+          <include name="aboutUsValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsValidation -->
+      <class name="aboutUsScripts.AboutUsBlogsValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="postCategoriesValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsBlogsValidation -->
+      <class name="servicesScripts.ProfessionalTrainingValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="PTValidation"/>
+        </methods>
+      </class> <!-- servicesScripts.ProfessionalTrainingValidation -->
+      <class name="servicesScripts.TechnicalWritingNavigation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="servicesBlocksNavigation"/>
+        </methods>
+      </class> <!-- servicesScripts.TechnicalWritingNavigation -->
+      <class name="homeScripts.SearchFieldValidation">
+        <methods>
+          <include name="negativeTesting"/>
+          <include name="preCondition"/>
+          <include name="positiveTesting"/>
+        </methods>
+      </class> <!-- homeScripts.SearchFieldValidation -->
+      <class name="homeScripts.FooterModuleNavigation">
+        <methods>
+          <include name="footerModuleValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- homeScripts.FooterModuleNavigation -->
+      <class name="homeScripts.ValidateEmail">
+        <methods>
+          <include name="preCondition"/>
+          <include name="emailValidation"/>
+        </methods>
+      </class> <!-- homeScripts.ValidateEmail -->
+      <class name="homeScripts.ScrollIconValidation">
+        <methods>
+          <include name="scrollIconValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- homeScripts.ScrollIconValidation -->
+      <class name="homeScripts.GlossaryValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="glossaryValition"/>
+        </methods>
+      </class> <!-- homeScripts.GlossaryValidation -->
+      <class name="servicesScripts.SoftwareDevValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="SoftDeValidation"/>
+        </methods>
+      </class> <!-- servicesScripts.SoftwareDevValidation -->
+      <class name="SolutionsScripts.TechPublicationValidation">
+        <methods>
+          <include name="techPublicationValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- SolutionsScripts.TechPublicationValidation -->
+      <class name="SolutionsScripts.ConsultingValidation">
+        <methods>
+          <include name="informArchValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- SolutionsScripts.ConsultingValidation -->
+      <class name="LangSelectorScripts.LangSeValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="langValidation"/>
+        </methods>
+      </class> <!-- LangSelectorScripts.LangSeValidation -->
+      <class name="aboutUsScripts.CompanyMValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="companyValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.CompanyMValidation -->
+      <class name="homeScripts.ValidateHomeClickability">
+        <methods>
+          <include name="validateHomeClickability"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- homeScripts.ValidateHomeClickability -->
+      <class name="homeScripts.BodyModuleNavigation">
+        <methods>
+          <include name="informArchitectureCardNavigation"/>
+          <include name="verifyGetInTouchNavigation"/>
+          <include name="offerServicesVerify"/>
+          <include name="preCondition"/>
+          <include name="techPublicationCardNavigation"/>
+          <include name="latestPostNavigation"/>
+          <include name="applIntegrationCardNavigation"/>
+          <include name="verifySoftDevNTechWriterNavigation"/>
+          <include name="weProvideElementsVerify"/>
+          <include name="webDevCardNavigation"/>
+        </methods>
+      </class> <!-- homeScripts.BodyModuleNavigation -->
+      <class name="contactUsScripts.ContactUsFormValidation">
+        <methods>
+          <include name="validationWithInValidData"/>
+          <include name="preCondition"/>
+          <include name="validationWithValidData"/>
+        </methods>
+      </class> <!-- contactUsScripts.ContactUsFormValidation -->
+      <class name="homeScripts.ChatBoatValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="chatBoatValidation"/>
+        </methods>
+      </class> <!-- homeScripts.ChatBoatValidation -->
+      <class name="aboutUsScripts.AboutUsCareersValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="aboutUsCareerValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsCareersValidation -->
+      <class name="homeScripts.SubscribeLinkValidation">
+        <methods>
+          <include name="subscribeRedirectionValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- homeScripts.SubscribeLinkValidation -->
+      <class name="SolutionsScripts.StaffAugValidation">
+        <methods>
+          <include name="staffAugValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- SolutionsScripts.StaffAugValidation -->
+      <class name="blog.FormValidation">
+        <methods>
+          <include name="validateFields"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- blog.FormValidation -->
+      <class name="aboutUsScripts.AboutUsPortfolioValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="aboutUsPortfolioValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.AboutUsPortfolioValidation -->
+      <class name="aboutUsScripts.PartnersValidation">
+        <methods>
+          <include name="preCondition"/>
+          <include name="partnersValidation"/>
+        </methods>
+      </class> <!-- aboutUsScripts.PartnersValidation -->
+      <class name="SolutionsScripts.SoftEngValidation">
+        <methods>
+          <include name="softEngValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- SolutionsScripts.SoftEngValidation -->
+      <class name="SolutionsScripts.InformArchValidation">
+        <methods>
+          <include name="informArchValidation"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- SolutionsScripts.InformArchValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [ParallelSuite] -->

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite  name="ParallelSuite" parallel="classes">
+  <test thread-count="10" name="Test">
+    <classes>
+      <class name="SolutionsScripts.StaffAugValidation"/>
+      <class name="aboutUsScripts.AboutUsValidation"/>
+      <class name="homeScripts.SubscribeLinkValidation"/>
+      <class name="blog.FormValidation"/>
+      <class name="homeScripts.FooterModuleNavigation"/>
+      <class name="aboutUsScripts.CompanyMValidation"/>
+      <class name="SolutionsScripts.InformArchValidation"/>
+      <class name="homeScripts.BodyModuleNavigation"/>
+      <class name="homeScripts.ValidateGlossary"/>
+      <class name="homeScripts.ScrollIconValidation"/>
+      <class name="homeScripts.ValidateEmail"/>
+      <class name="SolutionsScripts.TechPublicationValidation"/>
+      <class name="SolutionsScripts.SoftEngValidation"/>
+      <class name="servicesScripts.TechnicalWritingNavigation"/>
+      <class name="aboutUsScripts.PartnersValidation"/>
+      <class name="aboutUsScripts.AboutUsBlogsValidation"/>
+      <class name="homeScripts.SearchFieldValidation"/>
+      <class name="SolutionsScripts.ConsultingValidation"/>
+      <class name="aboutUsScripts.AboutUsPortfolioValidation"/>
+      <class name="aboutUsScripts.AboutUsCareersValidation"/>
+      <class name="homeScripts.ContactDetailsNavigation"/>
+      <class name="homeScripts.ValidateHomeClickability"/>
+      <class name="homeScripts.ChatBoatValidation"/>
+      <class name="contactUsScripts.ContactUsFormValidation"/>
+      <class name="LangSelectorScripts.LangSeValidation"/>
+      <class name="servicesScripts.ProfessionalTrainingValidation"/>
+      <class name="servicesScripts.SoftwareDevValidation"/>
+      <class name="homeScripts.GlossaryValidation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
